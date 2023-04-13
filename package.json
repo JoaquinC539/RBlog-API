@@ -1,0 +1,33 @@
+{
+  "name": "react-blog-back",
+  "version": "1.0.0",
+  "description": "react blog api handlert to be deployed",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaquinC539/RBlog-API.git"
+  },
+  "keywords": [
+    "blog",
+    "posts"
+  ],
+  "author": "JC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoaquinC539/RBlog-API/issues"
+  },
+  "homepage": "https://github.com/JoaquinC539/RBlog-API#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3",
+    "nodemon": "^2.0.22"
+  }
+}
