@@ -11,7 +11,6 @@ const controller={
         try{
             await fs.readFile(DBPath,'utf-8',(err,data)=>{
                 if(err){
-                    console.error(err);
                     return res.status(500).json({error:"Internal server error"});
                 }
                const posts=JSON.parse(data).posts;
@@ -38,7 +37,6 @@ const controller={
         await fs.promises.writeFile(DBPath,JSON.stringify(posts));
         res.json(post)
       } catch (error) {
-        console.log(error)
         res.status(500).json({error:"Internal Server Error. Post was not created"})
       }  
 },
@@ -70,7 +68,6 @@ const controller={
         }
         
     } catch (error) {
-        console.log(error)
         res.status(500).json({error:"Internal Server Error"})
     }
    }, 
@@ -89,7 +86,6 @@ const controller={
                 body:req.body.body
             }
         let postsArray=posts.posts;
-        console.log(postsArray)
          postsArray.splice(postIndex,1);
          postsArray.push(post);
          postsArray=postsArray.sort((a,b)=>{if(a.id<b.id){return -1}});
